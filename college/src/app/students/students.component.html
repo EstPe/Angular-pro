@@ -1,0 +1,8 @@
+<table>
+    <tr *ngFor="let i of studentList">
+        <td>{{i.id}}</td>
+        <td>{{i.Name}}</td>
+        <td>{{i.Course}}</td>
+    </tr>
+</table>
+<input [(ngModel)]='studentList[0].Course'>

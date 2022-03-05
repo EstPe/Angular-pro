@@ -1,0 +1,26 @@
+<ul>
+    <li>{{ courseList[0].name}}</li>
+    <li>{{ courseList[1].name}}</li>
+    <li>{{ courseList[2].name}}</li>
+    <li>{{ courseList[3].name}}</li>
+    <li>{{ courseList[4].name}}</li>
+    <li>{{ courseList[5].name}}</li>
+    <li>{{ courseList[6].name}}</li>
+    <li>{{ courseList[7].name}}</li>
+</ul>
+<table>
+    <tr>
+        <td>מס קורס</td>
+        <td>שם קורס</td>
+    </tr>
+    <tr *ngFor="let i of courseList">
+        <td>{{i.number}}</td>
+        <td>{{i.name}}</td>
+    </tr>=
+</table>
+<div *ngIf="num > 5 ;else itsnot">
+    <h1>yes</h1>
+</div>
+<ng-template #itsnot>
+    <h3>No</h3>
+</ng-template>

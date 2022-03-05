@@ -1,0 +1,63 @@
+<ul>
+    <li>{{ studentList[0].Name}}</li>
+    <li>{{ studentList[1].Name}}</li>
+    <li>{{ studentList[2].Name}}</li>
+    <li>{{ studentList[3].Name}}</li>
+    <li>{{ studentList[4].Name}}</li>
+</ul>
+<table>
+    <tr *ngFor="let i of studentList">
+        <td>{{i.id}}</td>
+        <td>{{i.Name}}</td>
+        <td>{{i.Course}}</td>
+    </tr>
+</table>
+<input [(ngModel)]='studentID'>
+<div [ngSwitch]='studentID'>
+    <div *ngSwitchCase="01">
+        <table>
+            <tr>
+                <td>{{studentList[0].id}}</td>
+                <td>{{studentList[0].Name}}</td>
+                <td>{{studentList[0].Course}}</td>
+            </tr>
+        </table>
+    </div>
+    <div *ngSwitchCase="02">
+        <table>
+            <tr>
+                <td>{{studentList[1].id}}</td>
+                <td>{{studentList[1].Name}}</td>
+                <td>{{studentList[1].Course}}</td>
+            </tr>
+        </table>
+    </div>
+    <div *ngSwitchCase="03">
+        <table>
+            <tr>
+                <td>{{studentList[2].id}}</td>
+                <td>{{studentList[2].Name}}</td>
+                <td>{{studentList[2].Course}}</td>
+            </tr>
+        </table>
+    </div>
+    <div *ngSwitchCase="04">
+        <table>
+            <tr>
+                <td>{{studentList[3].id}}</td>
+                <td>{{studentList[3].Name}}</td>
+                <td>{{studentList[3].Course}}</td>
+            </tr>
+        </table>
+    </div>
+    <div *ngSwitchCase="05">
+        <table>
+            <tr>
+                <td>{{studentList[4].id}}</td>
+                <td>{{studentList[4].Name}}</td>
+                <td>{{studentList[4].Course}}</td>
+            </tr>
+        </table>
+    </div>
+    <div *ngSwitchDefault="">There's no such student </div>
+</div>
